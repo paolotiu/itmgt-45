@@ -1,0 +1,20 @@
+{% include 'header.html' %}
+
+<h1>Orders</h1>
+
+<table class="table">
+  <tr>
+    <th>Order Date</th>
+    <th>Order Total</th>
+    <th>Order Quantity</th>
+  </tr>
+  {% for order in orders %}
+  <tr>
+    <td>{{order["date"]}}</td>
+    <td>{{order["total"]}}</td>
+    <td>{{order["qty"]}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% include 'footer.html' %}
